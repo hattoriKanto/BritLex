@@ -1,0 +1,768 @@
+@import ./_variables
+@import ./_reboot
+
+// BLOCKS  START
+
+.title
+    font-size: 24px
+    font-weight: 600
+    line-height: 3.33
+    text-align: center
+    color: $title-color
+@media (min-width: 575px)
+    .title
+        font-size: 30px
+        line-height: 2.67
+@media (min-width: 768px)
+    .title_left
+        text-align: left
+@media (min-width: 992px)
+    .title
+        font-size: 36px
+        line-height: 2.22
+@media (min-width: 1299px)
+    .title
+        font-size: 48px
+        line-height: 1.67
+
+.section_padding
+    padding: 80px 0 0 0
+@media (min-width: 575px)
+    .section_padding
+        padding: 75px 0 0 0
+@media (min-width: 768px)
+    .section_padding
+        padding: 70px 0 0 0
+@media (min-width: 992px)
+    .section_padding
+        padding: 65px 0 0 0
+@media (min-width: 992px)
+    .section_padding
+        padding: 100px 0 0 0
+
+// BLOCKS  END
+
+
+// CONTAINER  START
+
+.container
+    padding: 0 14px
+@media (min-width: 575px)
+    .container
+        padding: 0 32px
+@media (min-width: 768px)
+    .container
+        padding: 0 39px
+@media (min-width: 992px)
+    .container
+        padding: 0 31px
+@media (min-width: 1299px)
+    .container
+        max-width: 1340px
+        margin: 0 auto
+        box-sizing: content-box
+        padding: 0 130px
+
+// CONTAINER  END
+
+   
+// HEADER  START
+
+.header
+    &__wrapper
+        padding: 36px 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+    .logo
+        &__link
+            font-size: 24px
+            color: $title-color
+            span
+                color: $logo-secondary-color
+    &__button
+        display: none
+    &__menu
+        display: none
+    .hamburger
+        display: block
+        background: transparent
+        .span
+            display: block
+            margin: 4px 0 0 0
+            height: 3px
+            border-radius: 1px
+            background: $hamburger-color
+            transition: 0.3s all
+            &:first-child
+                margin: 0 0 0 0
+        &__top
+            width: 33px
+        &__middle
+            width: 33px
+        &__bottom
+            width: 23px
+@media (min-width: 575px)
+    .header
+        &__wrapper
+            padding: 39px 0
+        .logo
+            &__link
+                font-size: 30px
+        .hamburger
+            .span
+                margin: 5px 0 0 0
+                height: 4px
+            &__top
+                width: 42px
+            &__middle
+                width: 42px
+            &__bottom
+                width: 29px
+@media (min-width: 768px)
+    .header
+        .hamburger
+            .span
+                margin: 4px 0 0 0
+                height: 3px
+            &__top
+                width: 30px
+            &__middle
+                width: 30px
+            &__bottom
+                width: 20px
+@media (min-width: 992px)
+    .header
+        &__wrapper
+            padding: 25px 0
+        &__button
+            display: inline-block
+            text-align: center
+            width: 160px
+            height: 50px
+            font-size: 18px
+            color: $title-color
+            border-radius: 5px 
+            border: 2px solid $secondary-color
+            background: transparent
+        &__menu
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 25px
+        &__link
+            font-weight: 500
+            font-size: 16px
+        .hamburger
+            display: none
+@media (min-width: 1299px)
+    .header
+        &__wrapper
+            padding: 55px 0
+        .logo
+            &__link
+                font-size: 36px
+        &__button
+            width: 200px
+            height: 70px
+            font-size: 24px
+        &__menu
+            gap: 30px
+        &__link
+            font-size: 20px
+
+// HEADER  END
+
+
+// PROMO  START
+
+.promo
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__wrapper-img
+        width: 100%
+    &__wrapper-text
+        text-align: center
+    &__image
+        display: block
+        width: 100%
+        min-width: 299px
+        max-width: 424px
+        margin: 0 auto
+    &__title
+        margin: 16px 0 0 0
+        font-weight: 600
+        font-size: 24px
+        color: $title-color
+    &__subtitle
+        margin: 20px 0 0 0
+        font-size: 14px
+    &__button
+        display: block
+        max-width: 289px
+        max-height: 60px
+        margin: 30px auto 0 auto
+        padding: 18px 0
+        font-size: 16px
+        font-weight: 500
+        color: $btn-text-color
+        background: $secondary-color
+        border-radius: 5px
+@media (min-width: 575px)
+    .promo
+        &__image
+            min-width: 424px
+            max-width: 424px
+        &__title
+            font-size: 34px
+            line-height: 1.32
+        &__subtitle
+            margin: 26px 0 0 0
+            font-size: 16px
+        &__button
+            max-width: 305px
+            max-height: 75px
+            padding: 24px 0
+            margin: 37px auto 0 auto
+            font-size: 18px
+@media (min-width: 768px)
+    .promo
+        &__wrapper
+            flex-direction: row-reverse
+        &__wrapper-text
+            text-align: left
+        &__image
+            min-width: 352px
+            max-width: 460px
+        &__title
+            margin: 0
+            font-size: 36px
+            line-height: 1.25
+            max-width: 217px
+            &::after
+                content: ''
+                display: block
+                width: 58px
+                height: 58px
+                position: absolute
+                left: 240px
+                top: 220px
+                background-image: url(../img/promo/bulb.png)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+        &__subtitle
+            margin: 25px 0 0 0
+        &__button
+            max-width: 235px
+            max-height: 65px
+            padding: 19px 0
+            margin: 51px 0 0 0
+            text-align: center
+@media (min-width: 992px)
+    .promo
+        &__wrapper
+            gap: 51px
+        &__image
+            min-width: 460px
+            max-width: 661px
+        &__title
+            font-size: 48px
+            line-height: 1.33
+            max-width: 290px
+            &::after
+                width: 85px
+                height: 85px
+                left: 360px
+        &__subtitle
+            margin: 27px 0 0 0
+            font-size: 20px
+        &__button
+            max-width: 292px
+            max-height: 80px
+            padding: 22px 0
+            margin: 33px 0 0 0
+            font-size: 24px
+@media (min-width: 1299px)
+    .promo
+        &__wrapper
+            gap: 50px
+        &__image
+            margin: 0
+        &__title
+            font-size: 64px
+            line-height: 1.25
+            max-width: 386px
+            &::after
+                top: 290px
+                left: 40%
+        &__subtitle
+            margin: 40px 0 0 0
+            font-size: 24px
+        &__button
+            max-width: 438px
+            width: 438px
+            max-height: 118px
+            padding: 32px 0
+            margin: 61px 0 0 0
+            font-size: 36px
+            border-radius: 15px
+
+// PROMO  END
+
+
+// SKILLS  START
+
+.skills
+    &__cards
+        margin: 60px 0 0 0
+        display: grid
+        justify-content: center
+        grid-template-columns: 290px
+        grid-template-rows: minmax(600px, 100%) minmax(473px, 100%) minmax(473px, 100%) minmax(473px, 100%)
+        gap: 20px
+    &__item
+        padding: 15px 15px 30px 15px
+        border-radius: 5px
+        background: $skills-cards-color
+        text-align: left
+    .item
+        &__image
+            display: block
+            margin: 0 auto
+            width: 100%
+        &__title
+            font-size: 18px
+            line-height: 4.44
+            font-weight: 600
+            color: $secondary-color
+        &__subtitle
+            font-size: 13px
+        &__button
+            display: block
+            margin: 30px 0 0 0
+            padding: 14.5px 0
+            max-width: 178px
+            max-height: 50px
+            border-radius: 5px
+            background: $secondary-color
+            font-size: 14px
+            font-weight: 500
+            text-align: center
+            color: $btn-text-color
+    .item-1
+        &__image
+            max-width: 213px
+            max-height: 213px
+    .item-2
+        &__image
+            max-width: 204px
+            max-height: 204px
+    .item-3
+        &__image
+            max-width: 236px
+            max-height: 157px
+    .item-4
+        &__image
+            max-width: 232px
+            max-height: 154px
+@media (min-width: 575px)
+    .skills
+        &__cards
+            margin: 30px 0 0 0
+            grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr)
+            grid-template-rows: minmax(534px, 100%) minmax(534px, 100%)
+            gap: 30px
+        .item
+            &__button
+                margin: 20px auto 0 auto
+                max-width: 200px
+        .item-1
+            &__image
+                max-width: 185px
+                max-height: 185px
+        .item-2
+            &__image
+                max-width: 185px
+                max-height: 185px
+        .item-3
+            &__image
+                max-width: 206px
+                max-height: 137px 
+        .item-4
+            &__image
+                max-width: 206px
+                max-height: 137px      
+@media (min-width: 768px)
+    .skills
+        &__cards
+            grid-template-columns: minmax(224px, 100%) minmax(224px, 100%) minmax(224px, 100%) 
+            grid-template-rows: minmax(442px, 100%) minmax(210px, 100%)
+            grid-template-areas: "item-1 item-2 item-3" "item-1 item-4 item-4"
+            gap: 20px
+        &__item
+            padding: 15px
+            border-radius: 10px
+        .item
+            &__title
+                font-size: 20px
+                line-height: 4
+            &__button
+                margin: 12px 0 0 0
+                max-width: 178px
+        .item-1
+            grid-area: item-1
+            &__image
+                max-width: 214px
+                max-height: 214px
+        .item-2
+            grid-area: item-2
+            &__image
+                max-width: 144px
+                max-height: 144px
+        .item-3
+            grid-area: item-3
+            &__image
+                min-width: 216px
+                min-height: 144px 
+        .item-4
+            grid-area: item-4
+            display: flex
+            flex-direction: row-reverse
+            &__wrapper-img
+                display: flex
+                align-items: center
+            &__image
+                min-width: 202px
+                min-height: 134px 
+@media (min-width: 992px)
+    .skills
+        &__cards
+            margin: 50px 0 0 0
+            grid-template-columns: minmax(303px, 100%) minmax(303px, 100%) minmax(303px, 100%) 
+            grid-template-rows: minmax(442px, 100%) minmax(241px, 100%)
+            gap: 13px
+        &__item
+            padding: 20px
+        .item
+            &__title
+                font-size: 22px
+                line-height: 3.64
+            &__subtitle
+                font-size: 14px
+            &__button
+                font-size: 18px
+                max-width: 196px
+                max-height: 57px
+        .item-1
+            &__image
+                max-width: 260px
+                max-height: 260px
+        .item-2
+            &__image
+                max-width: 162px
+                max-height: 162px
+        .item-3
+            &__image
+                min-width: 243px
+                min-height: 162px 
+        .item-4
+            &__image
+                min-width: 254px
+                min-height: 169px 
+@media (min-width: 1299px)
+    .skills
+        &__cards
+            margin: 95px 0 0 0
+            grid-template-columns: minmax(334px, 100%) minmax(334px, 100%) minmax(334px, 100%) 
+            grid-template-rows: minmax(531px, 100%) minmax(343px, 100%)
+            gap: 18px
+        &__item
+            padding: 22px 22px 40px 22px
+        .item
+            &__title
+                font-size: 30px
+                line-height: 2.67
+            &__subtitle
+                font-size: 16px
+            &__button
+                margin: 35px 0 0 0
+                padding: 16.5px 0
+                max-width: 230px
+                max-height: 60px
+            .width
+                display: flex
+                width: 66.58%
+                max-width: 247px
+                max-height: 247px
+        .item-1
+            &__image
+                max-width: 390px
+                max-height: 390px
+        .item-2
+            &__image
+                max-width: none
+                max-height: none
+        .item-3
+            &__image
+                max-width: 371px
+                max-height: 247px 
+        .item-4
+            &__image
+                min-width: 382px
+                min-height: 255px 
+
+// SKILLS  END
+
+
+// ABOUT-US  START
+
+.about-us
+    &__content
+        margin: 25px 0 0 0
+    &__img
+        display: block
+        margin: 0 auto
+        max-height: 283px
+        max-width: 283px
+        width: 100%
+    &__wrapper-text
+        margin: 25px 0 0 0
+    &__desc
+        font-size: 13px
+        text-align: center
+    &__wrapper-counter
+        margin: 25px 0 0 0 
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 30px
+    &__counter
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-size: 20px
+        font-weight: 600
+        color: $secondary-color
+    .counter
+        &__text
+            font-size: 13px
+            font-weight: 400
+            color: $main-color-text
+@media (min-width: 575px)
+    .about-us
+        &__img
+            max-height: 352px
+            max-width: 352px
+        &__desc
+            font-size: 14px
+        &__wrapper-counter
+            flex-direction: row
+            justify-content: space-around
+            gap: 0
+        &__counter
+            font-size: 24px
+        .counter
+            &__text
+                font-size: 14px
+@media (min-width: 768px)
+    .about-us
+        &__content
+            margin: 0
+            display: grid
+            grid-template-columns: minmax(325px, 100%) minmax(295px, 100%)
+            grid-template-rows: minmax(295px, 100%)
+            grid-template-areas: "text image"
+            align-items: center
+            gap: 70px
+        &__img
+            max-height: 295px
+            max-width: 295px
+        &__wrapper-img
+            grid-area: image
+        &__wrapper-text
+            grid-area: text
+            margin: 0
+        &__desc
+            text-align: left
+        &__wrapper-counter
+            margin: 20px 0 0 0 
+            justify-content: space-between
+        &__counter
+            font-size: 22px
+        .counter
+            &__text
+                font-size: 13px
+@media (min-width: 992px)
+    .about-us
+        &__content
+            display: grid
+            grid-template-columns: minmax(529px, 100%) minmax(336px, 100%)
+            grid-template-rows: minmax(336px, 100%)
+            gap: 80px
+        &__img
+            max-height: 336px
+            max-width: 336px
+        &__wrapper-text
+            margin: 0
+        &__desc
+            font-size: 16px
+        &__wrapper-counter
+            justify-content: flex-start
+            gap: 100px
+        &__counter
+            font-size: 30px
+        .counter
+            &__text
+                font-size: 16px
+@media (min-width: 1299px)
+    .about-us
+        &__content
+            display: grid
+            grid-template-columns: minmax(572px, 100%) minmax(410px, 100%)
+            grid-template-rows: minmax(410px, 100%)
+            gap: 60px
+        &__img
+            max-height: 500px
+            max-width: 500px
+        &__wrapper-text
+            margin: 0
+        &__desc
+            font-size: 20px
+        &__wrapper-counter
+            margin: 40px 0 0 0
+        &__counter
+            font-size: 48px
+        .counter
+            &__text
+                font-size: 20px
+
+// ABOUT-US  END
+
+
+// FOOTER START
+
+.footer
+    &__wrapper
+        padding: 26px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-top: 1px solid $main-color-text
+    &__logo
+        font-size: 24px
+        color: $title-color
+        span
+            color: $main-color-text
+    &__menu
+        margin: 15px 0 0 0
+        display: flex
+        gap: 10px
+    &__link
+        font-size: 11px
+        font-weight: 500
+        color: $main-color-text
+    &__item
+        display: flex
+        align-items: center
+        position: relative
+        &::before
+            content: ''
+            display: block
+            width: 3px
+            height: 3px
+            border-radius: 100%
+            background: $main-color-text
+            position: absolute
+            top: 7px
+            left: -10%
+        &:nth-child(1)
+            &::before
+                display: none       
+    .menu__flex-column
+        flex-wrap: wrap
+        justify-content: center
+        gap: 15px 
+        .footer__item
+            justify-content: center
+            &::before
+                top: 9px
+            &:nth-child(1)
+                &::before
+                    display: block 
+        .footer__link
+                font-size: 13px           
+@media (min-width: 575px)
+    .footer
+        &__wrapper
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+        .wrapper__flex-column
+            flex-direction: column
+        &__logo
+            font-size: 30px
+        &__menu
+            margin: 0 0 0 0
+            gap: 15px
+        &__link
+            font-size: 12px
+        &__item
+            &::before
+                top: 9px
+        .menu__flex-column
+            margin: 15px 0 0 0
+            gap: 12px
+            .footer__item
+                &::before
+                    left: -8%
+            .footer__link
+                font-size: 14px    
+@media (min-width: 768px)
+    .footer
+        &__link
+            font-size: 13px
+        .menu__flex-column
+            gap: 15px
+            .footer__item
+                &::before
+                    top: 11px
+                    left: -7%
+            .footer__link
+                font-size: 16px
+@media (min-width: 992px)
+    .footer
+        &__link
+            font-size: 16px
+        .menu__flex-column
+            gap: 20px
+            .footer__item
+                &::before
+                    top: 9px
+                    left: -11%
+                    width: 5px
+                    height: 5px
+@media (min-width: 1299px)
+    .footer
+        &__wrapper
+            padding: 30px 0
+        &__logo
+            font-size: 36px
+        &__menu
+            gap: 25px
+        &__link
+            font-size: 24px
+        &__item
+            &::before
+                top: 16px
+                width: 7px
+                height: 7px
+        .menu__flex-column
+            .footer__item
+                &::before
+                    top: 10px
+
+// FOOTER END
