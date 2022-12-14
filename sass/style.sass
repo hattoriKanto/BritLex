@@ -13,14 +13,21 @@
     .title
         font-size: 30px
         line-height: 2.67
+    .hide-sm
+        display: none
+    .hide-md
+        display: flex
+        justify-content: center
 @media (min-width: 768px)
-    .title_left
-        text-align: left
+    .hide-md
+        display: none
+    .hide-sm
+        display: flex
 @media (min-width: 992px)
     .title
         font-size: 36px
         line-height: 2.22
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .title
         font-size: 48px
         line-height: 1.67
@@ -36,7 +43,7 @@
 @media (min-width: 992px)
     .section_padding
         padding: 65px 0 0 0
-@media (min-width: 992px)
+@media (min-width: 1366px)
     .section_padding
         padding: 100px 0 0 0
 
@@ -56,7 +63,7 @@
 @media (min-width: 992px)
     .container
         padding: 0 31px
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .container
         max-width: 1340px
         margin: 0 auto
@@ -155,7 +162,7 @@
             font-size: 16px
         .hamburger
             display: none
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .header
         &__wrapper
             padding: 55px 0
@@ -285,7 +292,7 @@
             padding: 22px 0
             margin: 33px 0 0 0
             font-size: 24px
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .promo
         &__wrapper
             gap: 50px
@@ -472,7 +479,7 @@
             &__image
                 min-width: 254px
                 min-height: 169px 
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .skills
         &__cards
             margin: 95px 0 0 0
@@ -572,20 +579,17 @@
     .about-us
         &__content
             margin: 0
-            display: grid
-            grid-template-columns: minmax(325px, 100%) minmax(295px, 100%)
-            grid-template-rows: minmax(295px, 100%)
-            grid-template-areas: "text image"
+            display: flex
+            flex-direction: row-reverse
+            justify-content: center
             align-items: center
-            gap: 70px
+            gap: 50px
         &__img
             max-height: 295px
             max-width: 295px
-        &__wrapper-img
-            grid-area: image
         &__wrapper-text
-            grid-area: text
             margin: 0
+            width: 326px
         &__desc
             text-align: left
         &__wrapper-counter
@@ -599,15 +603,12 @@
 @media (min-width: 992px)
     .about-us
         &__content
-            display: grid
-            grid-template-columns: minmax(529px, 100%) minmax(336px, 100%)
-            grid-template-rows: minmax(336px, 100%)
-            gap: 80px
+            gap: 60px
         &__img
             max-height: 336px
             max-width: 336px
         &__wrapper-text
-            margin: 0
+            width: 543px
         &__desc
             font-size: 16px
         &__wrapper-counter
@@ -618,18 +619,13 @@
         .counter
             &__text
                 font-size: 16px
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .about-us
-        &__content
-            display: grid
-            grid-template-columns: minmax(572px, 100%) minmax(410px, 100%)
-            grid-template-rows: minmax(410px, 100%)
-            gap: 60px
         &__img
             max-height: 500px
             max-width: 500px
         &__wrapper-text
-            margin: 0
+            width: 635px
         &__desc
             font-size: 20px
         &__wrapper-counter
@@ -638,9 +634,170 @@
             font-size: 48px
         .counter
             &__text
-                font-size: 20px
+                font-size: 18px
 
 // ABOUT-US  END
+
+
+// CONTACT-US START
+
+.contact-us
+    &__content
+        margin: 35px 0 0 0
+    &__img
+        display: block
+        margin: 0 auto
+        width: 100%
+        max-width: 253px
+        max-height: 228px
+    &__wrapper-text
+        margin: 35px 0 0 0
+    &__desc
+        font-size: 14px
+        text-align: center
+    &__form
+        margin: 30px 0 0 0
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__input
+        width: 291px
+        height: 50px
+        padding: 16px 16px 16px 26px
+        border-radius: 5px
+        border: 1px solid $main-color-text
+        font-size: 14px
+        outline: none
+        &::placeholder
+            font-size: 12px
+            color: $main-color-text
+    &__btn
+        margin: 17px 0 0 0
+        padding: 20px 0
+        width: 290px
+        height: 60px
+        text-align: center
+        font-size: 14px
+        font-weight: 500
+        color: $btn-text-color
+        border-radius: 5px
+        background: $secondary-color
+@media (min-width: 575px)
+    .contact-us
+        &__content
+            margin: 80px 0 0 0
+        &__img
+            max-width: 358px
+            max-height: 322px
+        &__desc
+            font-size: 16px
+        &__form
+            margin: 60px 0 0 0
+            flex-direction: row
+            justify-content: center
+        &__input
+            width: 319px
+            height: 60px
+            border-radius: 5px 0 0 5px
+        &__btn
+            margin: 0
+            width: 193px
+            border-radius: 0 5px 5px 0
+            font-size: 16px
+@media (min-width: 768px)
+    .contact-us
+        &__content
+            margin: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 30px
+        &__img
+            max-width: 233px
+            max-height: 210px
+        &__wrapper-text
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            width: 432px
+            margin: 0 0 0 0
+        &__desc
+            text-align: left
+            font-size: 14px
+        &__form
+            margin: 35px 0 0 0
+            gap: 5px
+        &__input
+            width: 283px
+            height: 50px
+            border-radius: 5px
+            font-size: 12px
+            &::placeholder
+                font-size: 12px
+        &__btn
+            padding: 15px 0
+            width: 145px
+            height: 50px
+            border-radius: 5px
+            font-size: 16px
+@media (min-width: 992px)
+    .contact-us
+        &__content
+            gap: 25px
+        &__img
+            max-width: 312px
+            max-height: 281px
+        &__wrapper-text
+            width: 530px
+        &__desc
+            font-size: 16px
+        &__form
+            gap: 12px
+        &__input
+            width: 323px
+            height: 60px
+            border-radius: 10px
+            font-size: 14px
+            &::placeholder
+                font-size: 14px
+        &__btn
+            padding: 18px 0
+            width: 192px
+            height: 60px
+            border-radius: 10px
+            font-size: 16px
+@media (min-width: 1366px)
+    .contact-us
+        &__content
+            gap: 25px
+        &__img
+            max-width: 477px
+            max-height: 429px
+        &__wrapper-text
+            min-width: 650px
+            max-width: 775px
+            width: min-content
+        &__desc
+            margin: 35px 0 0 0
+            font-size: 20px
+        &__form
+            margin: 50px 0 0 0
+            gap: 12px
+        &__input
+            padding: 25px 25px 25px 33px
+            width: 375px
+            height: 80px
+            font-size: 16px
+            &::placeholder
+                font-size: 16px
+        &__btn
+            padding: 25px 0
+            width: 264px
+            height: 80px
+            font-size: 20px
+// CONTACT-US END
+
 
 
 // FOOTER START
@@ -745,7 +902,7 @@
                     left: -11%
                     width: 5px
                     height: 5px
-@media (min-width: 1299px)
+@media (min-width: 1366px)
     .footer
         &__wrapper
             padding: 30px 0

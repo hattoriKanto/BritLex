@@ -25,6 +25,6 @@ window.onload = function myFn(){
         footerWrapper.classList.add("wrapper__flex-column");
     }else{
         footerMenu.classList.remove("menu__flex-column");
-        footerWrapper.classList.add("wrapper__flex-column");
+        footerWrapper.classList.remove("wrapper__flex-column");
     }
 }
