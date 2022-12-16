@@ -18,15 +18,15 @@ skillsItemImg.forEach(elem =>{
 
 const pricingItemImg = document.querySelectorAll(".pricing .item__img");
 
-pricingItemImg.forEach(elem =>{                                                        
-    elem.onload = function checkpricingImg(){                                          
+pricingItemImg.forEach(elem =>{     
+    window.addEventListener("load", () =>{
         const width = elem.naturalWidth;                                        
         const height = elem.naturalHeight;                                      
         const closestImg = elem.closest(".item__img");                  
         if(width !== height){                                                   
             closestImg.classList.add("max-width");                              
         }
-    }
+    })                                                   
 });
 
 window.onload = function checkFooterMenu(){
