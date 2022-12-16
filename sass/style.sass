@@ -45,7 +45,7 @@
         padding: 65px 0 0 0
 @media (min-width: 1366px)
     .section_padding
-        padding: 100px 0 0 0
+        padding: 120px 0 0 0
 
 // BLOCKS  END
 
@@ -638,6 +638,139 @@
 
 // ABOUT-US  END
 
+    
+// PRICING  START
+
+.pricing
+    &__content
+        margin: 50px 0 0 0
+        display: flex
+        flex-direction: column
+        gap: 60px
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    .item
+        &__img
+            display: block
+            margin: 0 auto
+            width: 100%
+            max-width: 197px
+            max-height: 197px
+        .max-width
+            max-width: none
+        &__title
+            margin: 25px 0 0 0
+            font-size: 18px
+            font-weight: 600
+            line-height: 1.56 
+            color: $secondary-color
+        &__desc
+            margin: 15px 0 0 0
+            font-size: 13px
+            text-align: center
+        &__price
+            display: flex
+            align-items: center
+            margin: 30px 0 0 0
+            padding: 5px 12px
+            border-radius: 5px
+            font-size: 18px
+            text-align: center
+            color: $secondary-color
+            background: $pricing-color-price
+            span
+                margin: 0 0 0 5px
+                font-size: 14px
+                color: $pricing-secondary-color
+@media (min-width: 575px)
+    .pricing
+        &__content
+            margin: 55px 0 0 0
+            gap: 80px
+        .item
+            &__img
+                max-width: 241px
+                max-height: 241px
+            &__title
+                margin: 30px 0 0 0
+                font-size: 24px
+                line-height: 1.17 
+            &__desc
+                margin: 20px 0 0 0
+                font-size: 14px
+            &__price
+                margin: 30px 0 0 0
+                font-size: 22px
+                span
+                    font-size: 16px
+@media (min-width: 768px)
+    .pricing
+        &__content
+            margin: 60px 0 0 0
+            flex-direction: row
+            align-items: center
+            gap: 15px
+        &__item
+            padding: 10px
+            width: 33.333%
+            min-height: 443px
+            align-items: center
+            justify-content: space-between
+        .item
+            &__img
+                max-width: 168px
+                max-height: 168px
+            &__title
+                margin: 0 0 0 0
+                font-size: 20px
+                line-height: 1.4 
+            &__desc
+                margin: 0 0 0 0
+            &__price
+                margin: 0 0 0 0
+@media (min-width: 992px)
+    .pricing
+        &__content
+            margin: 20px 0 0 0
+        &__item
+            min-height: 450px
+        .item
+            &__img
+                max-width: 195px
+                max-height: 195px
+            &__title
+                font-size: 22px
+                line-height: 2.18
+            &__desc
+                font-size: 16px
+            &__price
+                font-size: 24px
+@media (min-width: 1366px)
+    .pricing
+        &__content
+            margin: 50px 0 0 0
+        &__item
+            gap: 15px
+            min-height: 586px
+        .item
+            &__img
+                max-width: 283px
+                max-height: 283px
+            &__title
+                font-size: 30px
+                line-height: 1.6
+            &__desc
+                font-size: 20px
+            &__price
+                font-size: 30px
+                span
+                    font-size: 18px
+
+// PRICING  END
+
 
 // CONTACT-US START
 
@@ -796,8 +929,8 @@
             width: 264px
             height: 80px
             font-size: 20px
-// CONTACT-US END
 
+// CONTACT-US END
 
 
 // FOOTER START
