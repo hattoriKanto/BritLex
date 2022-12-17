@@ -47,6 +47,52 @@
     .section_padding
         padding: 120px 0 0 0
 
+.popup
+    display: flex
+    position: fixed
+    top: -100%
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    transition: 0.3s all
+    background: #fff
+    &__content
+        padding: 110px 15px 70px 15px
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        gap: 30px
+        overflow: auto
+        .header__menu
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 18px
+            .header__link
+                padding: 10px
+                font-size: 20px
+                display: block
+                text-transform: uppercase
+                transition: 0.3s all
+        .header__button
+            display: inline-block
+            text-align: center
+            padding: 15px 0
+            width: 160px
+            font-size: 18px
+            color: $title-color
+            border-radius: 5px 
+            border: 2px solid $secondary-color
+            background: transparent
+.show
+    top: 0
+@media (min-width: 992px)
+    .popup
+        display: none
 // BLOCKS  END
 
 
@@ -77,6 +123,8 @@
 
 .header
     &__wrapper
+        position: relative
+        z-index: 101
         padding: 36px 0
         display: flex
         align-items: center
@@ -92,23 +140,37 @@
     &__menu
         display: none
     .hamburger
+        padding: 10px
         display: block
         background: transparent
-        .span
+        &__span
             display: block
-            margin: 4px 0 0 0
+            position: relative
+            width: 30px
             height: 3px
             border-radius: 1px
             background: $hamburger-color
-            transition: 0.3s all
-            &:first-child
-                margin: 0 0 0 0
-        &__top
-            width: 33px
-        &__middle
-            width: 33px
-        &__bottom
-            width: 23px
+            transition: .5s all
+            &::after, &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 3px
+                position: absolute
+                top: 8px
+                left: 0
+                background: $hamburger-color
+            &::before
+                width: 30px
+                top: -8px
+    .active
+        .hamburger__span
+            transform: rotate(45deg)
+            &::after
+                opacity: 0
+            &::before
+                transform: rotate(-90deg)
+                top: 0
 @media (min-width: 575px)
     .header
         &__wrapper
@@ -116,28 +178,6 @@
         .logo
             &__link
                 font-size: 30px
-        .hamburger
-            .span
-                margin: 5px 0 0 0
-                height: 4px
-            &__top
-                width: 42px
-            &__middle
-                width: 42px
-            &__bottom
-                width: 29px
-@media (min-width: 768px)
-    .header
-        .hamburger
-            .span
-                margin: 4px 0 0 0
-                height: 3px
-            &__top
-                width: 30px
-            &__middle
-                width: 30px
-            &__bottom
-                width: 20px
 @media (min-width: 992px)
     .header
         &__wrapper
@@ -662,15 +702,19 @@
         .max-width
             max-width: none
         &__title
+            display: flex
+            align-items: center
             margin: 25px 0 0 0
             font-size: 18px
             font-weight: 600
             line-height: 1.56 
             color: $secondary-color
         &__desc
+            display: flex
+            align-items: center
+            text-align: center
             margin: 15px 0 0 0
             font-size: 13px
-            text-align: center
         &__price
             display: flex
             align-items: center
@@ -724,10 +768,12 @@
                 max-width: 168px
                 max-height: 168px
             &__title
+                min-height: 56px
                 margin: 0 0 0 0
                 font-size: 20px
                 line-height: 1.4 
             &__desc
+                min-height: 84px
                 margin: 0 0 0 0
             &__price
                 margin: 0 0 0 0
@@ -745,6 +791,7 @@
                 font-size: 22px
                 line-height: 2.18
             &__desc
+                min-height: 96px
                 font-size: 16px
             &__price
                 font-size: 24px
@@ -760,9 +807,11 @@
                 max-width: 283px
                 max-height: 283px
             &__title
+                min-height: 96px
                 font-size: 30px
                 line-height: 1.6
             &__desc
+                min-height: 120px
                 font-size: 20px
             &__price
                 font-size: 30px

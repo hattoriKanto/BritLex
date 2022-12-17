@@ -3,7 +3,7 @@
 const skillsItemImg = document.querySelectorAll(".skills .item__image");                       
 
 skillsItemImg.forEach(elem =>{                                                        
-    elem.onload = function checkSkillsImg(){                                          
+    window.addEventListener("load", () =>{                                          
         const width = elem.naturalWidth;                                        
         const height = elem.naturalHeight;                                      
         const closestImg = elem.closest(".item__image");                  
@@ -13,7 +13,7 @@ skillsItemImg.forEach(elem =>{
         if(width == height && closestImg.classList.contains("item-1__image")){         
             closestImg.classList.remove("width");                           
         }
-    }
+    })
 });
 
 const pricingItemImg = document.querySelectorAll(".pricing .item__img");
@@ -41,3 +41,18 @@ window.onload = function checkFooterMenu(){
         footerWrapper.classList.remove("wrapper__flex-column");
     }
 }
+
+const headerMenuClone = document.querySelector(".header__menu").cloneNode(1),
+    headerBtnClone = document.querySelector(".header__button").cloneNode(1),
+    hamburger = document.querySelector(".hamburger"),
+    popup = document.querySelector(".popup"),
+    popupContent = document.querySelector(".popup__content"),
+    body = document.querySelector("body");
+
+hamburger.addEventListener("click", () =>{
+    hamburger.classList.toggle("active");
+    popup.classList.toggle("show");
+    body.classList.toggle("noscroll");
+    popupContent.appendChild(headerMenuClone);
+    popupContent.appendChild(headerBtnClone);
+})
