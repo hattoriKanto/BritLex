@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Britlex - Learn Any Foreign Language</title>
@@ -20,16 +21,18 @@
                     <a class="logo__link" href="#">Brit<span>Lex</span></a>
                 </div>
                 <nav class="header__menu">
-                    <li class="header__item"><a href="#" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Skills</a></li>
-                    <li class="header__item"><a href="#" class="header__link">About Us</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Pricing</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Contacts</a></li>
+                    <ul class="header__list">
+                        <li class="header__item"><a href="#" class="header__link">Home</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Skills</a></li>
+                        <li class="header__item"><a href="#" class="header__link">About Us</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Pricing</a></li>
+                        <li class="header__item"><a href="#" class="header__link">Contacts</a></li>
+                    </ul>
                 </nav>
                 <button class="header__button">Let’s Talk</button>
-                <div class="header__hamburger hamburger">
+                <button class="header__hamburger hamburger">
                     <span class=" hamburger__span"></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
@@ -151,7 +154,7 @@
                         <h2 class="title contact-us__title hide-sm">Contact Us</h2>
                         <div class="contact-us__desc">Discover your current English level by taking our free online English test. Sign up to our newsletter for learning tips and free resource.</div>
                         <form class="contact-us__form" action="#">
-                            <input class="contact-us__input" placeholder="Enter Your E-mail" type="email">
+                            <input id="email" class="contact-us__input" placeholder="Enter Your E-mail" type="email">
                             <button class="contact-us__btn">Subscribe</button>
                         </form>
                     </div>

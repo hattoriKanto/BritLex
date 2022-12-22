@@ -79,6 +79,8 @@
         overflow: auto
         .header__menu
             display: flex
+        .header__list
+            display: flex
             flex-direction: column
             align-items: center
             gap: 18px
@@ -87,8 +89,9 @@
                 font-size: 20px
                 display: block
                 text-transform: uppercase
+                outline: none
                 transition: 300ms color
-                &:hover
+                &:hover, &:focus
                     color: $main-color-text
         .header__button
             display: inline-block
@@ -100,8 +103,9 @@
             border-radius: 5px 
             border: 2px solid $secondary-color
             background: transparent
+            outline: none
             transition: 300ms all
-            &:hover
+            &:hover, &:focus
                 background: $secondary-color
                 color: $btn-text-color
                 border: none
@@ -214,12 +218,15 @@
             border-radius: 5px 
             border: 2px solid $secondary-color
             background: transparent
+            outline: none
             transition: 300ms all
-            &:hover
+            &:hover, &:focus
                 background: $secondary-color
                 color: $btn-text-color
                 border: none
         &__menu
+            display: flex
+        &__list
             display: flex
             align-items: center
             justify-content: space-between
@@ -228,7 +235,8 @@
             font-weight: 500
             font-size: 16px
             transition: 300ms color
-            &:hover
+            outline: none
+            &:hover, &:focus
                 color: $main-color-text
         .hamburger
             display: none
@@ -286,9 +294,10 @@
         font-weight: 500
         color: $btn-text-color
         background: $secondary-color
+        outline: none
         border-radius: 5px
         transition: 300ms all
-        &:hover
+        &:hover, &:focus
             @include hover-btn()
 @media (min-width: 575px)
     .promo
@@ -432,8 +441,9 @@
             font-weight: 500
             text-align: center
             color: $btn-text-color
+            outline: none
             transition: 300ms all
-            &:hover
+            &:hover, &:focus
                 @include hover-btn()
     .item-1
         &__image
@@ -902,6 +912,8 @@
         &::placeholder
             font-size: 12px
             color: $main-color-text
+        &:focus
+            border: 2px solid $secondary-color
     &__btn
         margin: 17px 0 0 0
         padding: 20px 0
@@ -913,8 +925,9 @@
         color: $btn-text-color
         border-radius: 5px
         background: $secondary-color
+        outline: none
         transition: 300ms all
-        &:hover
+        &:hover, &:focus
             @include hover-btn()
 @media (min-width: 575px)
     .contact-us
@@ -1056,8 +1069,9 @@
         font-size: 11px
         font-weight: 500
         color: $main-color-text
+        outline: none
         transition: 300ms color
-        &:hover
+        &:hover, &:focus
            color: $secondary-color 
     &__item
         display: flex
